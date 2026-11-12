@@ -129,6 +129,9 @@ The pipeline integrates two interdependent jobs:
    - Logs into `ghcr.io` with `${{ secrets.GITHUB_TOKEN }}` and `packages: write` permissions.
    - Uses `docker/metadata-action@v6` and `docker/build-push-action@v6` to build and publish.
 
+![GitHub Secrets Verification](screenshots/github_secrets.png)
+*Figure: Encrypted Repository Secret (`DEMO_API_KEY`) configured in GitHub Settings.*
+
 ---
 
 ## 5. Laboratory Challenges Execution & Results
@@ -151,6 +154,14 @@ The pipeline integrates two interdependent jobs:
 - **Action:** Updated `src/index.js` and `test/app.test.js` to output `"Welcome to the Student Information System - Version 2.0!"` and committed (`35fa7d8`).
 - **Observation:** The pipeline completed full linting, unit testing, and compilation, publishing the updated image tagged `:main` to GHCR.
 - **Local Verification:** Verified locally at `http://localhost:3000` returning `Welcome to the Student Information System - Version 2.0!`.
+
+### Verified Execution Evidence
+
+![GitHub Actions Workflow Runs](screenshots/actions_success.jpg)
+*Figure: GitHub Actions Workflow runs demonstrating both failed test verification and green passing pipelines.*
+
+![GitHub Container Registry Package](screenshots/ghcr_published_package.png)
+*Figure: Published Docker package in GitHub Container Registry showing tags `main`, `v1.0.0`, and `latest`.*
 
 ---
 
