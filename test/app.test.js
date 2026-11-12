@@ -5,6 +5,6 @@ const { getMessage } = require("../src/index");
 test("SIS should return the correct message", () => {
     assert.strictEqual(
         getMessage(),
-        "Intentional Failure: Student Information System should fail here!"
+        "Student Information System is running!"
     );
 });
