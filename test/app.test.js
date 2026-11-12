@@ -5,6 +5,6 @@ const { getMessage } = require("../src/index");
 test("SIS should return the correct message", () => {
     assert.strictEqual(
         getMessage(),
-        "Student Information System is running!"
+        "Student Information System - Profile Feature Active"
     );
 });
