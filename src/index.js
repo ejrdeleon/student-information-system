@@ -1,7 +1,7 @@
 const http = require("node:http");
 
 function getMessage() {
-    return "Student Information System - Profile Feature Active";
+    return "Welcome to the Student Information System - Version 2.0!";
 }
 
 const server = http.createServer((req, res) => {
