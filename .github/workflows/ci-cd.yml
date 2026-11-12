@@ -53,6 +53,10 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v6
+      - name: Build Application Artifacts
+        run: |
+          mkdir -p dist
+          cp src/index.js dist/index.js
       - name: Login to GHCR
         uses: docker/login-action@v3
         with:
